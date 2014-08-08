@@ -14,7 +14,7 @@ namespace Unimake.ETL
         /// Indica que está no contexto de transformação do objeto
         /// </summary>
         /// <param name="context">Contexto de transformação</param>
-        /// <param name="action"></param>
+        /// <param name="action">Ação que será executada para a transformação</param>
         void InTransformContext(ITransform context, Action action);
 
         /// <summary>

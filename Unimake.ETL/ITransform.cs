@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Unimake.ETL.Transform;
+using Unimake.ETL.Enuns;
 
 namespace Unimake.ETL
 {
@@ -10,6 +12,25 @@ namespace Unimake.ETL
     /// </summary>
     public interface ITransform
     {
+        /// <summary>
+        /// Define o mapeamento que foi utilizado para este transformação. Ex: de-> para
+        /// </summary>
+        Dictionary<string, string> TransformMap { get; }
+        /// <summary>
+        /// Objeto de origem que foi usado para esta transformação
+        /// </summary>
+        ISource Source { get; }
+
+        /// <summary>
+        /// Valida a linha do objeto
+        /// </summary>
+        Action<IRow, RowValidation> DoRowValidation { get; set; }
+
+        /// <summary>
+        /// Funções utilizadas para a transformação do valor
+        /// </summary>
+        Dictionary<string, Func<object, object>> TransformFuncs { get; }
+
         /// <summary>
         /// Retorna os campos de origem mapeados
         /// </summary>
@@ -31,9 +52,22 @@ namespace Unimake.ETL
         object Execute();
 
         /// <summary>
-        /// Executa o processo de transformação do objeto
+        /// Executa o evento de linha inválida
         /// </summary>
-        /// <returns>Retorna o objeto que foi criado por este processo de transformação.</returns>
-        T Execute<T>();
+        /// <param name="inputRow">linha atual, que causou a invalidação</param>
+        /// <param name="rowValidation">Resultado da validação</param>
+        void RaiseRowInvalid(IRow inputRow, RowValidation rowValidation);
+
+        /// <summary>
+        /// Retorna a operação que deverá ser executada por esta linha
+        /// </summary>
+        Func<IRow, RowOperation> GetRowOperation { get; set; }
+
+        /// <summary>
+        /// Executa ação definida para o registro no objeto de destino
+        /// </summary>
+        /// <param name="rowOp">Operação que deverás er executada</param>
+        /// <param name="transformedRow">Linha que foi transformada</param>
+        void ProcessTransformedRow(RowOperation rowOp, DictionaryRow transformedRow);
     }
 }

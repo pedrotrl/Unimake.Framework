@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9A95605D-D877-47B6-9E3B-DDEAE2834B4F}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		Unimake.Data.Generic.vsmdi = Unimake.Data.Generic.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unimake.Data.Generic", "Unimake.Data.Generic\Unimake.Data.Generic.csproj", "{3A915C55-C947-43B7-97E8-C2A356CA385C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unimake.Data.Generic.Test", "Unimake.Data.Generic.Test\Unimake.Data.Generic.Test.csproj", "{0C95B324-FEDF-42C1-BBFB-F524BE280406}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Unimake.Data.Generic.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A915C55-C947-43B7-97E8-C2A356CA385C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A915C55-C947-43B7-97E8-C2A356CA385C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A915C55-C947-43B7-97E8-C2A356CA385C}.Debug|x86.ActiveCfg = Debug|x86
+		{3A915C55-C947-43B7-97E8-C2A356CA385C}.Debug|x86.Build.0 = Debug|x86
+		{3A915C55-C947-43B7-97E8-C2A356CA385C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A915C55-C947-43B7-97E8-C2A356CA385C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A915C55-C947-43B7-97E8-C2A356CA385C}.Release|x86.ActiveCfg = Release|x86
+		{3A915C55-C947-43B7-97E8-C2A356CA385C}.Release|x86.Build.0 = Release|x86
+		{0C95B324-FEDF-42C1-BBFB-F524BE280406}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C95B324-FEDF-42C1-BBFB-F524BE280406}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C95B324-FEDF-42C1-BBFB-F524BE280406}.Debug|x86.ActiveCfg = Debug|x86
+		{0C95B324-FEDF-42C1-BBFB-F524BE280406}.Debug|x86.Build.0 = Debug|x86
+		{0C95B324-FEDF-42C1-BBFB-F524BE280406}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C95B324-FEDF-42C1-BBFB-F524BE280406}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C95B324-FEDF-42C1-BBFB-F524BE280406}.Release|x86.ActiveCfg = Release|x86
+		{0C95B324-FEDF-42C1-BBFB-F524BE280406}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

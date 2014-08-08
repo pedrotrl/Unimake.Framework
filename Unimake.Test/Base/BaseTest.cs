@@ -91,6 +91,8 @@ namespace Unimake.Test
         {
             try
             {
+                System.Diagnostics.Debug.WriteLine(format, args);
+
                 if(args == null)
                     TestContext.WriteLine(format);
                 else
